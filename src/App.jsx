@@ -6,17 +6,17 @@
 import AboutMe from './Days/Day5/AboutMe';
 // import KnightModel from './Days/Day9/KnightModel';
 // import ApplePin from './Days/Day8/ApplePin'
-import Hero from './Days/Day3/SmoothHero'
+// import Hero from './Days/Day3/SmoothHero'
 
 function App() {
   return (
     <>
       {/* <AdvancedPin2/> */}
       {/* <KnightModel/> */}
-      {/* <AboutMe/> */}
+      <AboutMe/>
       {/* <Environment/> */}
       {/* <Environment/> */}
-      <Hero/>
+      {/* <Hero/> */}
       {/* <ApplePin/> */}
       
     </>
