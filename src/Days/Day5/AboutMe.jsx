@@ -166,7 +166,7 @@ function AboutMe() {
                 impactful, and beautifully functional. Let's build something that speaks.
               </div>
               <p className="my-4 text-white">
-                You can move the knight on the right side. Scroll Below to see what can i do for you{" "}
+                You can move the knight on the right side. <br /> Scroll Below to see what can i do for you{" "}
                 <FaArrowDown className="text-shadow-white mt-3 text-4xl" ref={iconRef} />
               </p>
             </div>
