@@ -18,6 +18,7 @@ function AboutMe() {
   const aiRef = useRef()
   const imgRef1 = useRef()
   const imgRef2 = useRef()
+  const imgRef3 = useRef()
   const iconRef = useRef()
 
   useLayoutEffect(() => {
@@ -93,6 +94,20 @@ function AboutMe() {
       },
     )
 
+    gsap.fromTo(
+      imgRef3.current,
+      { y: 0 },
+      {
+        y: -100,
+        scrollTrigger: {
+          trigger: imgRef3.current,
+          start: "top bottom",
+          end: "+=500",
+          scrub: true,
+          toggleActions: "play none none reverse",
+        },
+      },
+    )
     gsap.fromTo(
       imgRef2.current,
       { y: 0 },
@@ -188,11 +203,11 @@ function AboutMe() {
         <Environment />
       </div>
 
-      <div className="w-full rounded-lg overflow-hidden min-h-screen font-sans bg-white text-black px-4 md:p-8 meSection">
+      <div  className="w-full rounded-lg overflow-hidden min-h-screen font-sans bg-white text-black px-4 md:p-8 meSection">
         <h1 className="text-xl sm:text-2xl font-[Syncopate] max-w-5xl mx-auto">We can work together</h1>
         <div className="max-w-5xl mx-auto my-6 md:my-12 flex flex-col lg:flex-row justify-between gap-8">
           <div className="w-full lg:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden rounded-md mx-auto">
-            <img src="./dp.jpg" alt="profile" className="w-full h-full object-cover" />
+            <img src="./dp.jpg" alt="profile" className="w-full h-full object-cover" ref={imgRef3}/>
           </div>
           <div className="text-lg sm:text-xl md:text-2xl">
             <h1 className="font-semibold text-2xl sm:text-3xl md:text-4xl mb-3">My Stack:</h1>
