@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitText from "gsap/SplitText";
 import AboutMe from "../Day5/AboutMe";
 
-// Register GSAP plugins
+
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
 
@@ -16,7 +16,7 @@ export default function Hero() {
   const containerRef = useRef(null);
 
   useLayoutEffect(() => {
-    // Set will-change for performance
+    
     gsap.set([h1Ref.current, imgRef.current], {
       willChange: "transform",
     });
@@ -24,7 +24,7 @@ export default function Hero() {
     const tl = gsap.timeline();
     const mySplit = new SplitText(".split", { type: "words" });
     const chars = mySplit.words;
-    // Image zoom animation
+    
 
     gsap.fromTo(
       imgRef.current,
@@ -44,7 +44,7 @@ export default function Hero() {
       yPercent: 130,
       stagger: 0.5,
       ease: "power1.out",
-      // duration:3
+      
     })
 
       .to(chars, {
@@ -55,7 +55,7 @@ export default function Hero() {
 
       .to(containerRef.current, { yPercent: -100 });
 
-    // Cleanup function
+    
     return () => {
       if (mySplit) mySplit.revert();
     };
